@@ -39,14 +39,14 @@ for filepath in list_of_files:
         logging.info(f"creating directory:{filedir} for file {filename}")
 
 
-if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
-    with open(filepath,'w') as f:
-        pass #create an empty file
-        logging.info(f"creating directory: {filedir}")
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
+        with open(filepath,'w') as f:
+            pass #create an empty file
+            logging.info(f"creating directory: {filedir}")
 
-else:
-    logging.info("f{filename} is already exists")
-    
+    else:
+        logging.info("f{filename} is already exists")
+        
 
 
 
